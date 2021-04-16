@@ -255,8 +255,7 @@ class MediterranesnDietView extends StatelessWidget {
                             padding: const EdgeInsets.only(right: 16),
                             child: Center(
                               child: Stack(
-                                overflow: Overflow.visible,
-                                children: <Widget>[
+                                clipBehavior: Clip.none, children: <Widget>[
                                   Padding(
                                     padding: const EdgeInsets.all(8.0),
                                     child: Container(
@@ -268,7 +267,7 @@ class MediterranesnDietView extends StatelessWidget {
                                           Radius.circular(100.0),
                                         ),
                                         border: new Border.all(
-                                            width: 4,
+                                            width: 18,
                                             color: FitnessAppTheme
                                                 .nearlyDarkBlue
                                                 .withOpacity(0.2)),
@@ -310,20 +309,20 @@ class MediterranesnDietView extends StatelessWidget {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(10),
                                     child: CustomPaint(
                                       painter: CurvePainter(
                                           colors: [
                                             FitnessAppTheme.nearlyDarkBlue,
-                                            HexColor("#8A98E8"),
-                                            HexColor("#8A98E8")
+                                            FitnessAppTheme.nearlyDarkBlue,
+                                            FitnessAppTheme.nearlyDarkBlue,
                                           ],
-                                          angle: 140 +
+                                          angle: 290 +
                                               (360 - 140) *
                                                   (1.0 - animation.value)),
                                       child: SizedBox(
-                                        width: 108,
-                                        height: 108,
+                                        width: 100,
+                                        height: 100,
                                       ),
                                     ),
                                   )
